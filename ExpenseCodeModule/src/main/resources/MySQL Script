@@ -1,0 +1,24 @@
+USE mysql;
+CREATE TABLE expense_details(
+    -> expense_code INT AUTO_INCREMENT PRIMARY KEY,
+    -> expense_type VARCHAR(15) NOT NULL,
+    -> expense_description VARCHAR(100) NOT NULL
+    -> );
+    
+ SHOW TABLES;
+ DESCRIBE expense_details;
+ 
+ +---------------------+--------------+------+-----+---------+----------------+
+| Field               | Type         | Null | Key | Default | Extra          |
++---------------------+--------------+------+-----+---------+----------------+
+| expense_code        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| expense_type        | varchar(15)  | NO   |     | NULL    |                |
+| expense_description | varchar(100) | NO   |     | NULL    |                |
++---------------------+--------------+------+-----+---------+----------------+
+
+insert into expense_details(expense_type,expense_description) values('Food','Business');
+insert into expense_details(expense_type,expense_description) values('Electricity','Personal');
+insert into expense_details(expense_type,expense_description) values('Travel','Business');
+insert into expense_details(expense_type,expense_description) values('Food','Business');
+
+ select * from expense_details;
